@@ -5,21 +5,21 @@
 class WatchaPedia < Formula
   desc "왓챠 피디아 CLI (guinness API 래핑)"
   homepage "https://github.com/michael-lim-watcha/homebrew-tap"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.2.0/watcha-pedia_darwin_amd64.tar.gz"
-      sha256 "de73d0fd6cb64704e5f74d0aca034c082de2483d094b71a671dbb9e1240366b0"
+      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.0/watcha-pedia_darwin_amd64.tar.gz"
+      sha256 "96b9a8f9065b763eecfc51026179032df3a97493e1a92cdf41b3250a975b8cf8"
 
       define_method(:install) do
         bin.install "watcha-pedia"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.2.0/watcha-pedia_darwin_arm64.tar.gz"
-      sha256 "9415b506ba7abdffe7b36cccd2184be25e4bdc548b1d9d2ac63988b78b9a5cb5"
+      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.0/watcha-pedia_darwin_arm64.tar.gz"
+      sha256 "42b899d64b365538d3a6fdefa9fb3a59eaddb2e0435868176ebfbda68194c1e3"
 
       define_method(:install) do
         bin.install "watcha-pedia"
@@ -29,15 +29,15 @@ class WatchaPedia < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.2.0/watcha-pedia_linux_amd64.tar.gz"
-      sha256 "68892a621f99821dcb70c2502c2e5db2aa0836bede6a301882329a88253f880e"
+      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.0/watcha-pedia_linux_amd64.tar.gz"
+      sha256 "b57cd6178c0bc070e6fe21cf42a71a435301aa86feabebcc0fad60a613e08c14"
       define_method(:install) do
         bin.install "watcha-pedia"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.2.0/watcha-pedia_linux_arm64.tar.gz"
-      sha256 "d0f667d4130aad055b9598b3baac8b07ff5a3f76634673c9cbfc967adfd0357a"
+      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.0/watcha-pedia_linux_arm64.tar.gz"
+      sha256 "5100c2cd3ebab4376c6fc650f1ad8652f1484aefc133ac8d0feb7df801d3b6fe"
       define_method(:install) do
         bin.install "watcha-pedia"
       end
