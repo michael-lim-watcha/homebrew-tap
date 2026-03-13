@@ -5,42 +5,24 @@
 class WatchaPedia < Formula
   desc "왓챠 피디아 CLI (guinness API 래핑)"
   homepage "https://github.com/michael-lim-watcha/homebrew-tap"
-  version "0.3.3"
+  version "0.3.4"
   license "MIT"
+  depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.3/watcha-pedia_darwin_amd64.tar.gz"
-      sha256 "698fa54eb37ccf262c827706406fbed314e11b288b9f8779fc69a5852a5ebdbf"
+  if Hardware::CPU.intel?
+    url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.4/watcha-pedia_darwin_amd64.tar.gz"
+    sha256 "344df7b4d9028d9b358f4eebc756f8271f19b50c427affb4db633e3f0d116040"
 
-      define_method(:install) do
-        bin.install "watcha-pedia"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.3/watcha-pedia_darwin_arm64.tar.gz"
-      sha256 "96b2a93067fb2e1668ad56e4be9353ed211cc1c6ac5f539a3b25b1f1cd7547b6"
-
-      define_method(:install) do
-        bin.install "watcha-pedia"
-      end
+    define_method(:install) do
+      bin.install "watcha-pedia"
     end
   end
+  if Hardware::CPU.arm?
+    url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.4/watcha-pedia_darwin_arm64.tar.gz"
+    sha256 "73e1f6f5bbf1ba50a2816b21658bf180292f3b837843e2d419900f583856212c"
 
-  on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.3/watcha-pedia_linux_amd64.tar.gz"
-      sha256 "083394bfe444e65196c77c5cf7d9452d86b47727ce7fb8e837531e3edf157fc5"
-      define_method(:install) do
-        bin.install "watcha-pedia"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v0.3.3/watcha-pedia_linux_arm64.tar.gz"
-      sha256 "84d63b3623299588d19c564def159d4916eb18d01187312e7664a11237afa170"
-      define_method(:install) do
-        bin.install "watcha-pedia"
-      end
+    define_method(:install) do
+      bin.install "watcha-pedia"
     end
   end
 
