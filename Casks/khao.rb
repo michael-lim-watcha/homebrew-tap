@@ -3,7 +3,7 @@ cask "khao" do
   name "khao"
   desc "사내 IDP CLI"
   homepage "https://github.com/michael-lim-watcha/homebrew-tap"
-  version "0.1.1"
+  version "0.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,11 @@ cask "khao" do
   on_macos do
     on_intel do
       url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v#{version}/khao_darwin_amd64.tar.gz"
-      sha256 "344d0b58028aa4e22984cb3087755f3dad6b1de42622df9cc8dcccff3b65277f"
+      sha256 "24eed01024a2ecdcd6f45676789da775712bedc1b011b9531ed0924003724b4b"
     end
     on_arm do
       url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v#{version}/khao_darwin_arm64.tar.gz"
-      sha256 "3662d36eb0c7a8b6eb934aa92a2d8f7c531d402571d935e397ceef1d420bf91a"
-    end
-  end
-
-  on_linux do
-    on_intel do
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v#{version}/khao_linux_amd64.tar.gz"
-      sha256 "6f44ed934b63447aed478945ea08636e3cbc837c436ebea9bc670d2dcdde3aeb"
-    end
-    on_arm do
-      url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v#{version}/khao_linux_arm64.tar.gz"
-      sha256 "692eeebde92a30f8fe98e4e0c7a9682fe432d5067f9cac3d32f3065e1e8571c9"
+      sha256 "c08d237a45ea980fd66b807e8ac8c76c8ebf67951fbc836f08cce3f7afec7d17"
     end
   end
 
