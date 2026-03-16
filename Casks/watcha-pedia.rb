@@ -3,7 +3,7 @@ cask "watcha-pedia" do
   name "watcha-pedia"
   desc "왓챠 피디아 CLI (guinness API 래핑)"
   homepage "https://github.com/michael-lim-watcha/homebrew-tap"
-  version "0.3.6"
+  version "0.3.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,11 +14,11 @@ cask "watcha-pedia" do
   on_macos do
     on_intel do
       url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v#{version}/watcha-pedia_darwin_amd64.tar.gz"
-      sha256 "46c92adf10e025dcb0f26f8f6e536b8b9fe14ad0f1f0726ca6127f5c2ec62746"
+      sha256 "f0a3c0bad228c969bb0a27c9f099021ce954f3707b39c929ec05f820432d76ee"
     end
     on_arm do
       url "https://github.com/michael-lim-watcha/homebrew-tap/releases/download/v#{version}/watcha-pedia_darwin_arm64.tar.gz"
-      sha256 "0960186e586cef7859402aa32f30b53c568beb71f5eca1f097bc54db6dd610c4"
+      sha256 "65d9c38df3c16535fffe3a0a723f0fe319e2eac41fa047dc2b7caad92479e4c3"
     end
   end
 
